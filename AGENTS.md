@@ -29,12 +29,12 @@ This is **zman** - a local-first, offline-capable PWA for family schedule manage
 |-------|--------|-------------|
 | 1. Foundation | ✅ Done | Next.js 16 PWA, i18n, Serwist, offline shell |
 | 2. Yjs Core | ✅ Done | CRDT providers, IndexedDB, Zustand, hooks |
-| 3. Entity Mgmt | 🔄 Next | Add/remove/switch entities, forms, switcher |
-| 4. Calendar Views | ⏳ Pending | Day/Week/Month/Semester responsive grids |
-| 5. Holidays/Exceptions | ⏳ Pending | IL/CH calendar import, one-off overrides |
-| 6. WS Relay | ⏳ Pending | Hono + ws server (separate deploy) |
-| 7. Offline Queue UI | ⏳ Pending | Background Sync UI, conflict resolution |
-| 8. Push Notifications | ⏳ Pending | VAPID + Web Push API |
+| 3. Entity Mgmt | ✅ Done | Add/remove/switch entities, forms, switcher |
+| 4. Calendar Views | ✅ Done | Day/Week/Month/Semester responsive grids |
+| 5. Holidays/Exceptions | ✅ Done | IL/CH calendar import, one-off overrides |
+| 6. WS Relay | ✅ Done | Hono + ws server (separate deploy) |
+| 7. Offline Queue UI | ✅ Done | Background Sync UI, conflict resolution |
+| 8. Push Notifications | ✅ Done | VAPID + Web Push API |
 
 ## Development Principles
 
@@ -112,6 +112,13 @@ docs: update CONTEXT.md with relay server info
 | Service worker | `src/app/sw.ts` |
 | Proxy/routing | `src/proxy.ts` |
 | Manifest | `src/app/manifest.ts` |
+| Calendar components | `src/components/calendar/CalendarGrid.tsx` |
+| Calendar pages | `src/app/[locale]/calendar/{day,week,month,semester}/` |
+| Holiday import | `src/lib/calendar/israel.ts`, `src/lib/calendar/swiss.ts` |
+| Push notifications | `src/lib/push/`, `src/hooks/usePushNotifications.ts` |
+| Offline queue | `src/lib/yjs/offline-queue.ts`, `src/hooks/useOfflineQueue.ts` |
+| Relay server | `relay-server/` (separate deployment) |
+| Settings page | `src/app/[locale]/settings/page.tsx` |
 
 ## Known Issues / TODO
 

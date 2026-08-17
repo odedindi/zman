@@ -100,7 +100,33 @@
       "syncing": "Synchronisiere...",
       "synced": "Synchronisiert",
       "pending": "Ausstehende Änderungen",
-      "error": "Sync-Fehler"
+      "error": "Sync-Fehler",
+      "offline": "Offline",
+      "lastSync": "Zuletzt synchronisiert {time}"
+    },
+    "conflict": {
+      "title": "Sync-Konflikt",
+      "description": "Auf einem anderen Gerät wurden Änderungen vorgenommen, während Sie offline waren",
+      "acceptLocal": "Meine Änderungen behalten",
+      "acceptRemote": "Remote-Änderungen akzeptieren",
+      "merge": "Änderungen zusammenführen",
+      "dismiss": "Schließen",
+      "localChanges": "{count} lokal",
+      "remoteChanges": "{count} remote"
+    },
+    "queue": {
+      "title": "Ausstehende Änderungen",
+      "syncNow": "Jetzt synchronisieren",
+      "clearQueue": "Warteschlange leeren",
+      "confirmClear": "Möchten Sie die Warteschlange wirklich leeren? Alle ausstehenden Änderungen werden verworfen.",
+      "noPending": "Keine ausstehenden Änderungen",
+      "entity": "Einheit",
+      "operation": "Vorgang",
+      "time": "Zeit",
+      "created": "Erstellt",
+      "updated": "Aktualisiert",
+      "deleted": "Gelöscht",
+      "lastSync": "Zuletzt synchronisiert {time}"
     }
   },
   "offline": {
@@ -165,6 +191,111 @@
       "moved": "Verschoben",
       "earlyPickup": "Frühe Abholung",
       "lateDrop": "Späte Abgabe"
+    },
+    "import": {
+      "title": "Kalender importieren",
+      "israel": "Israel",
+      "swiss": "Schweiz",
+      "year": "Jahr",
+      "canton": "Kanton",
+      "selectHolidays": "Feiertage auswählen",
+      "importSelected": "Ausgewählte importieren",
+      "importing": "Importiere...",
+      "noHolidaysSelected": "Keine Feiertage ausgewählt",
+      "importSuccess": "{count} Feiertage erfolgreich importiert",
+      "importError": "Fehler beim Importieren der Feiertage",
+      "selectAll": "Alle auswählen",
+      "deselectAll": "Auswahl aufheben",
+      "noHolidaysForYear": "Keine Feiertage für dieses Jahr verfügbar",
+      "school": "Schulferien",
+      "public": "Feiertag"
+    }
+  },
+  "holidays": {
+    "title": "Feiertage",
+    "addHoliday": "Feiertag hinzufügen",
+    "editHoliday": "Feiertag bearbeiten",
+    "holidayName": "Feiertagsname",
+    "holidayNamePlaceholder": "z.B. Sommerferien, Weihnachten",
+    "startDate": "Startdatum",
+    "endDate": "Enddatum",
+    "isSchoolHoliday": "Schulferien",
+    "noHolidays": "Keine Feiertage konfiguriert",
+    "noHolidaysDescription": "Fügen Sie Feiertage hinzu, um Schulferien und Feiertage zu verfolgen",
+    "import": "Kalender importieren",
+    "importDescription": "Importieren Sie Feiertage aus dem israelischen oder schweizerischen Kalender",
+    "confirmDelete": "Möchten Sie diesen Feiertag wirklich löschen?",
+    "createHoliday": "Feiertag erstellen",
+    "saveChanges": "Änderungen speichern",
+    "nameRequired": "Feiertagsname ist erforderlich",
+    "startDateRequired": "Startdatum ist erforderlich",
+    "endDateRequired": "Enddatum ist erforderlich",
+    "endDateAfterStart": "Enddatum muss nach dem Startdatum liegen",
+    "schoolHoliday": "Schulferien",
+    "publicHoliday": "Feiertag",
+    "noEntity": "Erstellen Sie zuerst eine Einheit",
+    "addFirstHoliday": "Ersten Feiertag hinzufügen"
+  },
+  "exceptions": {
+    "title": "Ausnahmen",
+    "addException": "Ausnahme hinzufügen",
+    "editException": "Ausnahme bearbeiten",
+    "date": "Datum",
+    "type": "Typ",
+    "newStartTime": "Neue Startzeit",
+    "newEndTime": "Neue Endzeit",
+    "notes": "Notizen",
+    "notesPlaceholder": "Optionale Notizen...",
+    "noExceptions": "Keine Ausnahmen konfiguriert",
+    "noExceptionsDescription": "Fügen Sie Ausnahmen für abgesagte, verschobene oder zeitlich geänderte Tage hinzu",
+    "confirmDelete": "Möchten Sie diese Ausnahme wirklich löschen?",
+    "createException": "Ausnahme erstellen",
+    "saveChanges": "Änderungen speichern",
+    "dateRequired": "Datum ist erforderlich",
+    "startTimeRequired": "Startzeit ist erforderlich",
+    "endTimeRequired": "Endzeit ist erforderlich",
+    "endTimeAfterStart": "Endzeit muss nach der Startzeit liegen",
+    "cancelled": "Abgesagt",
+    "moved": "Verschoben",
+    "earlyPickup": "Frühe Abholung",
+    "lateDrop": "Späte Abgabe",
+    "cancelledWarning": "Dies hebt den Zeitplan für diesen Tag auf",
+    "cancelTomorrow": "Morgen absagen",
+    "earlyPickupToday": "Frühe Abholung heute",
+    "lateDropToday": "Späte Abgabe heute",
+    "noEntity": "Erstellen Sie zuerst eine Einheit",
+    "addFirstException": "Erste Ausnahme hinzufügen"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "notifications": {
+      "title": "Benachrichtigungen",
+      "description": "Erhalten Sie Push-Benachrichtigungen für Zeitplanänderungen",
+      "enable": "Benachrichtigungen aktivieren",
+      "disable": "Benachrichtigungen deaktivieren",
+      "permissionDenied": "Benachrichtigungen vom Browser blockiert",
+      "notSupported": "Benachrichtigungen in diesem Browser nicht unterstützt",
+      "testNotification": "Test-Benachrichtigung senden",
+      "testSuccess": "Test-Benachrichtigung gesendet!"
+    },
+    "sync": {
+      "title": "Sync",
+      "description": "Datensynchronisation verwalten",
+      "status": "Sync-Status",
+      "manualSync": "Jetzt synchronisieren",
+      "lastSynced": "Zuletzt synchronisiert: {time}"
+    },
+    "storage": {
+      "title": "Speicher",
+      "description": "Lokalen Datenspeicher verwalten",
+      "usage": "Speicherverbrauch",
+      "clearData": "Alle Daten löschen",
+      "confirmClear": "Dies löscht alle lokalen Daten. Sind Sie sicher?"
+    },
+    "about": {
+      "title": "Über",
+      "version": "Version",
+      "build": "Build"
     }
   }
 }

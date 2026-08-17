@@ -100,7 +100,33 @@
       "syncing": "מסתנכרן...",
       "synced": "מסונכרן",
       "pending": "שינויים ממתינים",
-      "error": "שגיאת סנכרון"
+      "error": "שגיאת סנכרון",
+      "offline": "אופליין",
+      "lastSync": "סונכרן לאחרונה {time}"
+    },
+    "conflict": {
+      "title": "התנגשות סנכרון",
+      "description": "בוצעו שינויים במכשיר אחר כשהיית במצב אופליין",
+      "acceptLocal": "שמור את השינויים שלי",
+      "acceptRemote": "קבל שינויים מרוחקים",
+      "merge": "מזג שינויים",
+      "dismiss": "סגור",
+      "localChanges": "{count} מקומיים",
+      "remoteChanges": "{count} מרוחקים"
+    },
+    "queue": {
+      "title": "שינויים ממתינים",
+      "syncNow": "סנכרן עכשיו",
+      "clearQueue": "נקה תור",
+      "confirmClear": "האם אתה בטוח שברצונך לנקות את התור? זה ימחק את כל השינויים הממתינים.",
+      "noPending": "אין שינויים ממתינים",
+      "entity": "ישות",
+      "operation": "פעולה",
+      "time": "זמן",
+      "created": "נוצר",
+      "updated": "עודכן",
+      "deleted": "נמחק",
+      "lastSync": "סונכרן לאחרונה {time}"
     }
   },
   "offline": {
@@ -165,6 +191,111 @@
       "moved": "הועבר",
       "earlyPickup": "איסוף מוקדם",
       "lateDrop": "הורדה מאוחרת"
+    },
+    "import": {
+      "title": "ייבוא לוח שנה",
+      "israel": "ישראל",
+      "swiss": "שוויץ",
+      "year": "שנה",
+      "canton": "קנטון",
+      "selectHolidays": "בחר חגים",
+      "importSelected": "ייבא נבחרים",
+      "importing": "מייבא...",
+      "noHolidaysSelected": "לא נבחרו חגים",
+      "importSuccess": "יובאו בהצלחה {count} חגים",
+      "importError": "נכשל ייבוא החגים",
+      "selectAll": "בחר הכל",
+      "deselectAll": "בטל בחירה",
+      "noHolidaysForYear": "אין חגים זמינים לשנה זו",
+      "school": "חופשת בית ספר",
+      "public": "חג ציבורי"
+    }
+  },
+  "holidays": {
+    "title": "חגים וחופשות",
+    "addHoliday": "הוסף חג",
+    "editHoliday": "ערוך חג",
+    "holidayName": "שם החג",
+    "holidayNamePlaceholder": "למשל: חופשת קיץ, חנוכה",
+    "startDate": "תאריך התחלה",
+    "endDate": "תאריך סיום",
+    "isSchoolHoliday": "חופשת בית ספר",
+    "noHolidays": "אין חגים מוגדרים",
+    "noHolidaysDescription": "הוסף חגים כדי לעקוב אחר חופשות בית ספר וחגים ציבוריים",
+    "import": "ייבוא לוח שנה",
+    "importDescription": "ייבא חגים מלוח השנה הישראלי או השוויצרי",
+    "confirmDelete": "האם אתה בטוח שברצונך למחוק חג זה?",
+    "createHoliday": "צור חג",
+    "saveChanges": "שמור שינויים",
+    "nameRequired": "שם החג נדרש",
+    "startDateRequired": "תאריך התחלה נדרש",
+    "endDateRequired": "תאריך סיום נדרש",
+    "endDateAfterStart": "תאריך הסיום חייב להיות אחרי תאריך ההתחלה",
+    "schoolHoliday": "חופשת בית ספר",
+    "publicHoliday": "חג ציבורי",
+    "noEntity": "צור ישות תחילה",
+    "addFirstHoliday": "הוסף חג ראשון"
+  },
+  "exceptions": {
+    "title": "חריגים",
+    "addException": "הוסף חריג",
+    "editException": "ערוך חריג",
+    "date": "תאריך",
+    "type": "סוג",
+    "newStartTime": "שעת התחלה חדשה",
+    "newEndTime": "שעת סיום חדשה",
+    "notes": "הערות",
+    "notesPlaceholder": "הערות אופציונליות...",
+    "noExceptions": "אין חריגים מוגדרים",
+    "noExceptionsDescription": "הוסף חריגים לימים מבוטלים, מועברים או עם שעות שונות",
+    "confirmDelete": "האם אתה בטוח שברצונך למחוק חריג זה?",
+    "createException": "צור חריג",
+    "saveChanges": "שמור שינויים",
+    "dateRequired": "תאריך נדרש",
+    "startTimeRequired": "שעת התחלה נדרשת",
+    "endTimeRequired": "שעת סיום נדרשת",
+    "endTimeAfterStart": "שעת הסיום חייבת להיות אחרי שעת ההתחלה",
+    "cancelled": "בוטל",
+    "moved": "הועבר",
+    "earlyPickup": "איסוף מוקדם",
+    "lateDrop": "הורדה מאוחרת",
+    "cancelledWarning": "זה יבטל את לוח הזמנים ליום זה",
+    "cancelTomorrow": "בטל מחר",
+    "earlyPickupToday": "איסוף מוקדם היום",
+    "lateDropToday": "הורדה מאוחרת היום",
+    "noEntity": "צור ישות תחילה",
+    "addFirstException": "הוסף חריג ראשון"
+  },
+  "settings": {
+    "title": "הגדרות",
+    "notifications": {
+      "title": "התראות",
+      "description": "קבל התראות דחיפה על שינויים בלוח הזמנים",
+      "enable": "הפעל התראות",
+      "disable": "כבה התראות",
+      "permissionDenied": "התראות חסומות על ידי הדפדפן",
+      "notSupported": "התראות לא נתמכות בדפדפן זה",
+      "testNotification": "שלח התראת בדיקה",
+      "testSuccess": "התראת בדיקה נשלחה!"
+    },
+    "sync": {
+      "title": "סנכרון",
+      "description": "נהל סנכרון נתונים",
+      "status": "סטטוס סנכרון",
+      "manualSync": "סנכרן עכשיו",
+      "lastSynced": "סונכרן לאחרונה: {time}"
+    },
+    "storage": {
+      "title": "אחסון",
+      "description": "נהל אחסון נתונים מקומי",
+      "usage": "שימוש באחסון",
+      "clearData": "נקה את כל הנתונים",
+      "confirmClear": "זה ימחק את כל הנתונים המקומיים. האם אתה בטוח?"
+    },
+    "about": {
+      "title": "אודות",
+      "version": "גרסה",
+      "build": "בנייה"
     }
   }
 }

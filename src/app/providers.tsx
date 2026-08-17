@@ -62,7 +62,7 @@ export function Providers({ children, locale, messages }: ProvidersProps) {
           {children}
           <InstallPrompt deferredPrompt={deferredPrompt} />
           <OfflineBanner isOnline={isOnline} />
-          <SyncStatus isOnline={isOnline} />
+          <SyncStatus />
           <Toaster position="bottom-right" toastOptions={{ className: 'rtl' }} />
         </SWRConfig>
       </QueryClientProvider>
