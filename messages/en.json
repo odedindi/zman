@@ -114,5 +114,27 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "openSource": "Open Source"
+  },
+  "entities": {
+    "title": "Manage Entities",
+    "addFirst": "Create First Entity",
+    "addNew": "Add New Entity",
+    "editEntity": "Edit Entity",
+    "addEntity": "Add Entity",
+    "yourEntities": "Your Entities",
+    "empty": {
+      "title": "No Entities Yet",
+      "description": "Create your first entity - a child, kindergarten, school, activity, or anything you want to track"
+    },
+    "addFirst": "Create First Entity",
+    "addNew": "Add New",
+    "manage": "Manage",
+    "active": "Active",
+    "select": "Select",
+    "edit": "Edit",
+    "delete": "Delete",
+    "confirmDelete": "Are you sure you want to delete this entity? All associated data will be removed.",
+    "createdAt": "Created on {date}",
+    "backToHome": "Back to Home"
   }
 }

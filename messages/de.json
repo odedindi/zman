@@ -114,5 +114,27 @@
     "privacy": "Datenschutz",
     "terms": "Bedingungen",
     "openSource": "Open Source"
+  },
+  "entities": {
+    "title": "Einheiten verwalten",
+    "addFirst": "Erste Einheit erstellen",
+    "addNew": "Neue Einheit hinzufügen",
+    "editEntity": "Einheit bearbeiten",
+    "addEntity": "Einheit hinzufügen",
+    "yourEntities": "Deine Einheiten",
+    "empty": {
+      "title": "Noch keine Einheiten",
+      "description": "Erstelle deine erste Einheit - ein Kind, Kindergarten, Schule, Aktivität oder was auch immer du verfolgen möchtest"
+    },
+    "addFirst": "Erste Einheit erstellen",
+    "addNew": "Neu hinzufügen",
+    "manage": "Verwalten",
+    "active": "Aktiv",
+    "select": "Auswählen",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "confirmDelete": "Bist du sicher, dass du diese Einheit löschen möchtest? Alle zugehörigen Daten werden entfernt.",
+    "createdAt": "Erstellt am {date}",
+    "backToHome": "Zur Startseite"
   }
 }

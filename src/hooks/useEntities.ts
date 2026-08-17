@@ -6,7 +6,7 @@ import { useEntitiesStore, Entity, ScheduleEntry, HolidayEntry, ExceptionEntry }
 export function useEntities() {
   const store = useEntitiesStore();
 
-  const addEntity = useCallback((entity: Omit<Entity, 'id' | 'createdAt' | 'updatedAt'>) => {
+  const addEntity = useCallback((entity: Omit<Entity, 'id' | 'createdAt' | 'updatedAt' | 'createdBy'>) => {
     return store.addEntity(entity);
   }, [store.addEntity]);
 

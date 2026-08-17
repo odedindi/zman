@@ -52,8 +52,23 @@ export function useLocale() {
   return useI18n().locale;
 }
 
-export function useTranslations() {
-  return useI18n().t;
+export function useTranslations(namespace?: string) {
+  const { t, messages } = useI18n();
+  
+  if (!namespace) {
+    return t;
+  }
+  
+  return (key: string, params?: Record<string, string | number>) => {
+    const fullKey = `${namespace}.${key}`;
+    let message = messages[fullKey] || messages[key] || key;
+    if (params) {
+      Object.entries(params).forEach(([param, value]) => {
+        message = message.replace(new RegExp(`\\{${param}\\}`, 'g'), String(value));
+      });
+    }
+    return message;
+  };
 }
 
 export function getDirection(locale: Locale) {

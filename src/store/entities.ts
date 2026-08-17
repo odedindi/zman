@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { immer } from 'zustand/middleware/immer';
 import { persist } from 'zustand/middleware';
+import { generateUserId } from '@/lib/yjs/awareness';
 
 export interface Entity {
   id: string;
@@ -59,7 +60,7 @@ interface EntitiesState {
   error: string | null;
 
   // Entity actions
-  addEntity: (entity: Omit<Entity, 'id' | 'createdAt' | 'updatedAt'>) => string;
+  addEntity: (entity: Omit<Entity, 'id' | 'createdAt' | 'updatedAt' | 'createdBy'>) => string;
   updateEntity: (id: string, updates: Partial<Entity>) => void;
   deleteEntity: (id: string) => void;
   setActiveEntity: (id: string | null) => void;
@@ -135,6 +136,7 @@ export const useEntitiesStore = create<EntitiesState>()(
           id,
           color: entity.color || getRandomColor(),
           avatar: entity.avatar || getRandomAvatar(),
+          createdBy: generateUserId(),
           createdAt: now,
           updatedAt: now,
         };
