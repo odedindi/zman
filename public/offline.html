@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>zman - אופליין</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #fefce8;
+      color: #1c1917;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      direction: rtl;
+    }
+    .container { text-align: center; max-width: 24rem; }
+    .icon { 
+      width: 96px; height: 96px; border-radius: 50%; 
+      background: linear-gradient(135deg, #f59e0b, #f97316);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 1.5rem; font-size: 48px; font-weight: 700; color: white;
+    }
+    h1 { font-size: 1.875rem; font-weight: 700; margin-bottom: 1rem; }
+    p { color: #78716c; margin-bottom: 2rem; line-height: 1.6; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.75rem 1.5rem; border-radius: 0.5rem;
+      font-weight: 600; text-decoration: none; border: none;
+      cursor: pointer; transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-primary { background: #f59e0b; color: white; }
+    .btn-secondary { background: #e7e5e4; color: #1c1917; margin-top: 0.5rem; }
+    .btn-group { display: flex; flex-direction: column; gap: 0.75rem; }
+    @media (min-width: 640px) { .btn-group { flex-direction: row; justify-content: center; } }
+    .back-online { 
+      margin-top: 1.5rem; color: #16a34a; display: flex; 
+      align-items: center; justify-content: center; gap: 0.5rem; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">ז</div>
+    <h1>אתה במצב אופליין</h1>
+    <p>נראה שאין חיבור לאינטרנט. zman עובד גם אופליין - הנתונים שלך נשמרים מקומית ויסתנכרנו כשתחזור לרשת.</p>
+    <div class="btn-group">
+      <button class="btn btn-primary" onclick="window.location.reload()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+        </svg>
+        נסה שוב
+      </button>
+      <a href="/" class="btn btn-secondary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9 22 9 12 15 12"></polyline>
+        </svg>
+        לדף הבית
+      </a>
+    </div>
+  </div>
+  <script>
+    window.addEventListener('online', () => {
+      document.body.innerHTML = '<div class="container"><div class="icon">ז</div><h1>החיבור חזר!</h1><p class="back-online">מפנה לדף הבית...</p></div>';
+      setTimeout(() => window.location.href = '/', 1000);
+    });
+  </script>
+</body>
+</html>

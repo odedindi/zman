@@ -1,0 +1,118 @@
+{
+  "app": {
+    "name": "zman",
+    "tagline": "Familienplaner",
+    "description": "Verwalten Sie Familienpläne für Kindergarten, Schule und Aktivitäten - funktioniert offline, synchronisiert automatisch"
+  },
+  "nav": {
+    "home": "Start",
+    "entities": "Einheiten",
+    "settings": "Einstellungen",
+    "day": "Tag",
+    "week": "Woche",
+    "month": "Monat",
+    "semester": "Semester"
+  },
+  "hero": {
+    "title": "Familienplaner",
+    "subtitle": "Einfach. Geteilt. Immer aktuell.",
+    "description": "Verwalten Sie Kindergarten-, Schul- und Aktivitätspläne Ihrer Kinder an einem Ort. Funktioniert offline, synchronisiert sich automatisch zwischen Ihnen und Ihrem Partner.",
+    "ctaPrimary": "Loslegen",
+    "ctaSecondary": "Demo ansehen",
+    "betaBadge": "Beta - Funktioniert offline, synchronisiert automatisch"
+  },
+  "features": {
+    "multipleViews": {
+      "title": "Mehrere Ansichten",
+      "desc": "Tag, Woche, Monat und Semester"
+    },
+    "multipleEntities": {
+      "title": "Mehrere Kinder/Einheiten",
+      "desc": "So viele hinzufügen wie nötig - Kindergarten, Schule, Aktivitäten"
+    },
+    "pushNotifications": {
+      "title": "Push-Benachrichtigungen",
+      "desc": "Echtzeit-Updates bei Änderungen"
+    },
+    "offline": {
+      "title": "Funktioniert Offline",
+      "desc": "Voller Zugriff auch ohne Internet"
+    },
+    "autoSync": {
+      "title": "Auto-Sync",
+      "desc": "Zwischen Partnern ohne zentralen Server"
+    },
+    "smartCalendar": {
+      "title": "Intelligenter Kalender",
+      "desc": "Israelische/Schweizer Feiertage eingebaut"
+    }
+  },
+  "howItWorks": {
+    "title": "So funktioniert's",
+    "steps": [
+      {
+        "title": "Einheit erstellen",
+        "desc": "Kind, Kindergarten, Schule oder Aktivität mit Farbe und Symbol hinzufügen"
+      },
+      {
+        "title": "Zeitplan festlegen",
+        "desc": "Wiederkehrende Tage, Feiertage und einmalige Änderungen definieren"
+      },
+      {
+        "title": "Mit Partner teilen",
+        "desc": "Einfacher Einladungscode - kein Konto oder Passwort nötig"
+      }
+    ]
+  },
+  "common": {
+    "loading": "Lädt...",
+    "error": "Fehler",
+    "retry": "Wiederholen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "today": "Heute",
+    "tomorrow": "Morgen",
+    "yesterday": "Gestern",
+    "week": "Woche",
+    "month": "Monat",
+    "year": "Jahr"
+  },
+  "pwa": {
+    "installPrompt": {
+      "title": "zman installieren",
+      "description": "Schneller Zugriff vom Startbildschirm, funktioniert offline, Push-Benachrichtigungen",
+      "install": "Jetzt installieren",
+      "later": "Später"
+    },
+    "offlineBanner": {
+      "offline": "Sie sind offline - Änderungen werden lokal gespeichert",
+      "online": "Wieder online"
+    },
+    "syncStatus": {
+      "syncing": "Synchronisiere...",
+      "synced": "Synchronisiert",
+      "pending": "Ausstehende Änderungen",
+      "error": "Sync-Fehler"
+    }
+  },
+  "offline": {
+    "title": "Sie sind offline",
+    "description": "Keine Internetverbindung erkannt. zman funktioniert auch offline - Ihre Daten werden lokal gespeichert und synchronisieren sich, wenn Sie wieder online sind.",
+    "retry": "Erneut versuchen",
+    "home": "Zur Startseite",
+    "backOnline": "Verbindung wiederhergestellt! Leite weiter..."
+  },
+  "footer": {
+    "privacy": "Datenschutz",
+    "terms": "Bedingungen",
+    "openSource": "Open Source"
+  }
+}

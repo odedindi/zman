@@ -1,0 +1,118 @@
+{
+  "app": {
+    "name": "zman",
+    "tagline": "Family Schedule",
+    "description": "Manage family schedules for kindergarten, school, and activities - works offline, syncs automatically"
+  },
+  "nav": {
+    "home": "Home",
+    "entities": "Entities",
+    "settings": "Settings",
+    "day": "Day",
+    "week": "Week",
+    "month": "Month",
+    "semester": "Semester"
+  },
+  "hero": {
+    "title": "Family Schedule",
+    "subtitle": "Simple. Shared. Always up to date.",
+    "description": "Manage kindergarten, school, and activity schedules for your kids in one place. Works offline, syncs automatically between you and your partner.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "View Demo",
+    "betaBadge": "Beta - Works offline, syncs automatically"
+  },
+  "features": {
+    "multipleViews": {
+      "title": "Multiple Views",
+      "desc": "Day, Week, Month, and Semester"
+    },
+    "multipleEntities": {
+      "title": "Multiple Kids/Entities",
+      "desc": "Add as many as needed - kindergarten, school, activities"
+    },
+    "pushNotifications": {
+      "title": "Push Notifications",
+      "desc": "Real-time updates on changes"
+    },
+    "offline": {
+      "title": "Works Offline",
+      "desc": "Full access even without internet"
+    },
+    "autoSync": {
+      "title": "Auto Sync",
+      "desc": "Between partners without a central server"
+    },
+    "smartCalendar": {
+      "title": "Smart Calendar",
+      "desc": "Israeli/Swiss holidays built-in"
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "title": "Create Entity",
+        "desc": "Add a child, kindergarten, school, or activity with color and icon"
+      },
+      {
+        "title": "Set Schedule",
+        "desc": "Define recurring days, holidays, and one-off changes"
+      },
+      {
+        "title": "Share with Partner",
+        "desc": "Simple invite code - no account or password needed"
+      }
+    ]
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "close": "Close",
+    "confirm": "Confirm",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "yesterday": "Yesterday",
+    "week": "Week",
+    "month": "Month",
+    "year": "Year"
+  },
+  "pwa": {
+    "installPrompt": {
+      "title": "Install zman",
+      "description": "Quick access from home screen, works offline, push notifications",
+      "install": "Install Now",
+      "later": "Later"
+    },
+    "offlineBanner": {
+      "offline": "You're offline - changes saved locally",
+      "online": "Back online"
+    },
+    "syncStatus": {
+      "syncing": "Syncing...",
+      "synced": "Synced",
+      "pending": "Pending changes",
+      "error": "Sync error"
+    }
+  },
+  "offline": {
+    "title": "You're Offline",
+    "description": "No internet connection detected. zman works offline too - your data is saved locally and will sync when you're back online.",
+    "retry": "Try Again",
+    "home": "Go Home",
+    "backOnline": "Connection restored! Redirecting..."
+  },
+  "footer": {
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "openSource": "Open Source"
+  }
+}
