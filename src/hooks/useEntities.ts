@@ -96,6 +96,11 @@ export function useEntityHolidays(entityId: string) {
   };
 }
 
+export function useActiveEntity() {
+  const store = useEntitiesStore();
+  return store.activeEntityId ? store.entities[store.activeEntityId] : null;
+}
+
 export function useEntityExceptions(entityId: string) {
   const store = useEntitiesStore();
 

@@ -136,5 +136,35 @@
     "confirmDelete": "Are you sure you want to delete this entity? All associated data will be removed.",
     "createdAt": "Created on {date}",
     "backToHome": "Back to Home"
+  },
+  "calendar": {
+    "today": "Today",
+    "noEvents": "No events today",
+    "more": "more",
+    "views": {
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "semester": "Semester"
+    },
+    "daysShort": {
+      "sun": "Sun",
+      "mon": "Mon",
+      "tue": "Tue",
+      "wed": "Wed",
+      "thu": "Thu",
+      "fri": "Fri",
+      "sat": "Sat"
+    },
+    "weekOf": "Week of {date}",
+    "semester": {
+      "progress": "Semester Progress"
+    },
+    "exception": {
+      "cancelled": "Cancelled",
+      "moved": "Moved",
+      "earlyPickup": "Early Pickup",
+      "lateDrop": "Late Drop"
+    }
   }
 }

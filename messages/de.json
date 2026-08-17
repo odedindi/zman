@@ -136,5 +136,35 @@
     "confirmDelete": "Bist du sicher, dass du diese Einheit löschen möchtest? Alle zugehörigen Daten werden entfernt.",
     "createdAt": "Erstellt am {date}",
     "backToHome": "Zur Startseite"
+  },
+  "calendar": {
+    "today": "Heute",
+    "noEvents": "Keine Ereignisse heute",
+    "more": "mehr",
+    "views": {
+      "day": "Tag",
+      "week": "Woche",
+      "month": "Monat",
+      "semester": "Semester"
+    },
+    "daysShort": {
+      "sun": "So",
+      "mon": "Mo",
+      "tue": "Di",
+      "wed": "Mi",
+      "thu": "Do",
+      "fri": "Fr",
+      "sat": "Sa"
+    },
+    "weekOf": "Woche vom {date}",
+    "semester": {
+      "progress": "Semesterfortschritt"
+    },
+    "exception": {
+      "cancelled": "Abgesagt",
+      "moved": "Verschoben",
+      "earlyPickup": "Frühe Abholung",
+      "lateDrop": "Späte Abgabe"
+    }
   }
 }

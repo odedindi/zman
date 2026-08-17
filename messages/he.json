@@ -136,5 +136,35 @@
     "confirmDelete": "האם אתה בטוח שברצונך למחוק ישות זו? כל הנתונים הקשורים אליה יימחקו.",
     "createdAt": "נוצר ב-{date}",
     "backToHome": "חזרה לדף הבית"
+  },
+  "calendar": {
+    "today": "היום",
+    "noEvents": "אין אירועים היום",
+    "more": "עוד",
+    "views": {
+      "day": "יום",
+      "week": "שבוע",
+      "month": "חודש",
+      "semester": "סמסטר"
+    },
+    "daysShort": {
+      "sun": "א",
+      "mon": "ב",
+      "tue": "ג",
+      "wed": "ד",
+      "thu": "ה",
+      "fri": "ו",
+      "sat": "ש"
+    },
+    "weekOf": "שבוע של {date}",
+    "semester": {
+      "progress": "התקדמות הסמסטר"
+    },
+    "exception": {
+      "cancelled": "בוטל",
+      "moved": "הועבר",
+      "earlyPickup": "איסוף מוקדם",
+      "lateDrop": "הורדה מאוחרת"
+    }
   }
 }
