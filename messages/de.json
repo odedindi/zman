@@ -209,6 +209,25 @@
       "noHolidaysForYear": "Keine Feiertage für dieses Jahr verfügbar",
       "school": "Schulferien",
       "public": "Feiertag"
+    },
+    "export": {
+      "title": "Kalender exportieren",
+      "ics": "Als ICS exportieren",
+      "icsDescription": "In Google Calendar, Apple Calendar oder Outlook importieren",
+      "csv": "Als CSV exportieren",
+      "csvDescription": "In Excel oder Google Sheets öffnen",
+      "includeSchedules": "Wochenpläne einbeziehen",
+      "includeHolidays": "Feiertage einbeziehen",
+      "dateRange": "Datumsbereich",
+      "from": "Von",
+      "to": "Bis",
+      "download": "Herunterladen",
+      "downloading": "Generiere...",
+      "noData": "Keine Daten zum Exportieren",
+      "exportSuccess": "Kalender erfolgreich exportiert",
+      "exportError": "Kalender-Export fehlgeschlagen",
+      "export": "Exportieren",
+      "close": "Schließen"
     }
   },
   "holidays": {
@@ -297,5 +316,32 @@
       "version": "Version",
       "build": "Build"
     }
+  },
+  "schedule": {
+    "title": "Wochenplan",
+    "addSchedule": "Plan hinzufügen",
+    "editSchedule": "Plan bearbeiten",
+    "deleteSchedule": "Plan löschen",
+    "confirmDelete": "Sind Sie sicher, dass Sie diesen Plan löschen möchten?",
+    "dayOfWeek": "Wochentag",
+    "startTime": "Startzeit",
+    "endTime": "Endzeit",
+    "location": "Ort",
+    "notes": "Notizen",
+    "validFrom": "Gültig ab",
+    "validUntil": "Gültig bis",
+    "noSchedules": "Keine Pläne konfiguriert. Fügen Sie Ihren ersten Wochenplan hinzu.",
+    "addFirst": "Ersten Plan hinzufügen",
+    "timeError": "Endzeit muss nach Startzeit sein",
+    "dateError": "Gültig bis muss nach Gültig ab sein",
+    "sunday": "Sonntag",
+    "monday": "Montag",
+    "tuesday": "Dienstag",
+    "wednesday": "Mittwoch",
+    "thursday": "Donnerstag",
+    "friday": "Freitag",
+    "saturday": "Samstag",
+    "noLocation": "Kein Ort",
+    "noNotes": "Keine Notizen"
   }
 }

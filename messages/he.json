@@ -209,6 +209,25 @@
       "noHolidaysForYear": "אין חגים זמינים לשנה זו",
       "school": "חופשת בית ספר",
       "public": "חג ציבורי"
+    },
+    "export": {
+      "title": "ייצוא לוח שנה",
+      "ics": "ייצוא כ-ICS",
+      "icsDescription": "ייבא לגוגל קלנדר, אפל קלנדר או אאוטלוק",
+      "csv": "ייצוא כ-CSV",
+      "csvDescription": "פתח באקסל או גוגל שיטס",
+      "includeSchedules": "כלול לוחות זמנים שבועיים",
+      "includeHolidays": "כלול חגים",
+      "dateRange": "טווח תאריכים",
+      "from": "מ-",
+      "to": "עד",
+      "download": "הורדה",
+      "downloading": "מייצר...",
+      "noData": "אין נתונים לייצוא",
+      "exportSuccess": "לוח השנה יוצא בהצלחה",
+      "exportError": "ייצוא לוח השנה נכשל",
+      "export": "ייצוא",
+      "close": "סגור"
     }
   },
   "holidays": {
@@ -297,5 +316,32 @@
       "version": "גרסה",
       "build": "בנייה"
     }
+  },
+  "schedule": {
+    "title": "לוח זמנים שבועי",
+    "addSchedule": "הוסף לוח זמנים",
+    "editSchedule": "ערוך לוח זמנים",
+    "deleteSchedule": "מחק לוח זמנים",
+    "confirmDelete": "האם אתה בטוח שברצונך למחוק לוח זמנים זה?",
+    "dayOfWeek": "יום בשבוע",
+    "startTime": "שעת התחלה",
+    "endTime": "שעת סיום",
+    "location": "מיקום",
+    "notes": "הערות",
+    "validFrom": "תקף מ-",
+    "validUntil": "תקף עד",
+    "noSchedules": "אין לוחות זמנים מוגדרים. הוסף את לוח הזמנים הראשון שלך.",
+    "addFirst": "הוסף לוח זמנים ראשון",
+    "timeError": "שעת סיום חייבת להיות אחרי שעת התחלה",
+    "dateError": "תאריך סיום חייב להיות אחרי תאריך התחלה",
+    "sunday": "ראשון",
+    "monday": "שני",
+    "tuesday": "שלישי",
+    "wednesday": "רביעי",
+    "thursday": "חמישי",
+    "friday": "שישי",
+    "saturday": "שבת",
+    "noLocation": "ללא מיקום",
+    "noNotes": "ללא הערות"
   }
 }

@@ -209,6 +209,25 @@
       "noHolidaysForYear": "No holidays available for this year",
       "school": "School Holiday",
       "public": "Public Holiday"
+    },
+    "export": {
+      "title": "Export Calendar",
+      "ics": "Export as ICS",
+      "icsDescription": "Import into Google Calendar, Apple Calendar, or Outlook",
+      "csv": "Export as CSV",
+      "csvDescription": "Open in Excel or Google Sheets",
+      "includeSchedules": "Include weekly schedules",
+      "includeHolidays": "Include holidays",
+      "dateRange": "Date Range",
+      "from": "From",
+      "to": "To",
+      "download": "Download",
+      "downloading": "Generating...",
+      "noData": "No data to export",
+      "exportSuccess": "Calendar exported successfully",
+      "exportError": "Failed to export calendar",
+      "export": "Export",
+      "close": "Close"
     }
   },
   "holidays": {
@@ -297,5 +316,32 @@
       "version": "Version",
       "build": "Build"
     }
+  },
+  "schedule": {
+    "title": "Weekly Schedule",
+    "addSchedule": "Add Schedule",
+    "editSchedule": "Edit Schedule",
+    "deleteSchedule": "Delete Schedule",
+    "confirmDelete": "Are you sure you want to delete this schedule?",
+    "dayOfWeek": "Day of Week",
+    "startTime": "Start Time",
+    "endTime": "End Time",
+    "location": "Location",
+    "notes": "Notes",
+    "validFrom": "Valid From",
+    "validUntil": "Valid Until",
+    "noSchedules": "No schedules configured. Add your first weekly schedule.",
+    "addFirst": "Add First Schedule",
+    "timeError": "End time must be after start time",
+    "dateError": "Valid until must be after valid from",
+    "sunday": "Sunday",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "noLocation": "No location",
+    "noNotes": "No notes"
   }
 }

@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { useTranslations, useLocale } from '@/i18n/context';
 import { useEntitiesStore, Entity, ScheduleEntry, HolidayEntry, ExceptionEntry } from '@/store/entities';
 import { CalendarGrid, CalendarEvent } from '@/components/calendar/CalendarGrid';
-import { ChevronLeft, ChevronRight, Calendar, Loader2 } from 'lucide-react';
+import { ExportDialog } from '@/components/calendar/ExportDialog';
+import { ChevronLeft, ChevronRight, Calendar, Loader2, Download } from 'lucide-react';
 import { format, parseISO, addMonths, subMonths, startOfMonth, endOfMonth, isSameDay, isSameMonth } from 'date-fns';
 import { cn } from '@/lib/utils';
 
@@ -26,6 +27,7 @@ export default function MonthViewPage({ params }: MonthViewPageProps) {
 
   const [monthParam, setMonthParam] = useState<string>('');
   const [monthDate, setMonthDate] = useState<Date>(new Date());
+  const [exportDialogOpen, setExportDialogOpen] = useState(false);
 
   useEffect(() => {
     params.then((p) => {
@@ -126,7 +128,18 @@ export default function MonthViewPage({ params }: MonthViewPageProps) {
             {t('backToHome')}
           </Link>
           <h1 className="text-xl font-bold">{monthLabel}</h1>
-          <div className="w-20" />
+          <div className="flex items-center gap-2">
+            {entity && (
+              <button
+                onClick={() => setExportDialogOpen(true)}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm font-medium bg-muted text-muted-foreground hover:bg-muted/80 transition-colors whitespace-nowrap"
+                aria-label={t('export')}
+              >
+                <Download className="h-3.5 w-3.5" />
+                <span className="hidden sm:inline">{t('export')}</span>
+              </button>
+            )}
+          </div>
         </div>
         <nav className="border-t bg-background/50 px-4 py-2 flex items-center justify-center gap-2 overflow-x-auto">
           <Link
@@ -221,6 +234,7 @@ export default function MonthViewPage({ params }: MonthViewPageProps) {
           </div>
         )}
       </main>
+      <ExportDialog isOpen={exportDialogOpen} onClose={() => setExportDialogOpen(false)} />
     </div>
   );
 }
