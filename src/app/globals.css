@@ -35,11 +35,14 @@ body {
   font-family: var(--font-hebrew), var(--font-sans);
   background-color: var(--color-background);
   color: var(--color-foreground);
-  direction: rtl;
 }
 
-html[dir="ltr"] body {
+[dir="ltr"] body {
   font-family: var(--font-sans);
+}
+
+[dir="rtl"] body {
+  font-family: var(--font-hebrew), var(--font-sans);
 }
 
 @media (display-mode: standalone) {

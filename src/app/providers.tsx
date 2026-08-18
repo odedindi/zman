@@ -1,19 +1,15 @@
 'use client';
 
 import { ReactNode, useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import { SWRConfig } from 'swr';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { I18nProvider } from '@/i18n/context';
+import type { Messages } from '@/i18n/types';
 import { InstallPrompt } from '@/components/pwa/InstallPrompt';
 import { OfflineBanner } from '@/components/pwa/OfflineBanner';
 import { SyncStatus } from '@/components/pwa/SyncStatus';
+import { Toaster } from '@/components/ui/toaster';
 import { Locale } from '@/i18n';
-
-const Toaster = dynamic(
-  () => import('@/components/ui/toaster').then((mod) => mod.Toaster),
-  { ssr: false }
-);
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;
@@ -23,7 +19,7 @@ interface BeforeInstallPromptEvent extends Event {
 interface ProvidersProps {
   children: ReactNode;
   locale: Locale;
-  messages: Record<string, string>;
+  messages: Messages;
 }
 
 export function Providers({ children, locale, messages }: ProvidersProps) {
@@ -38,8 +34,10 @@ export function Providers({ children, locale, messages }: ProvidersProps) {
   }));
   const [isOnline, setIsOnline] = useState(true);
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleOnline = () => setIsOnline(true);
     const handleOffline = () => setIsOnline(false);
     const handleBeforeInstallPrompt = (e: Event) => {
@@ -65,10 +63,14 @@ export function Providers({ children, locale, messages }: ProvidersProps) {
       <QueryClientProvider client={queryClient}>
         <SWRConfig value={{ revalidateOnFocus: false }}>
           {children}
-          <InstallPrompt deferredPrompt={deferredPrompt} />
-          <OfflineBanner isOnline={isOnline} />
-          <SyncStatus />
-          <Toaster position="bottom-right" toastOptions={{ className: 'rtl' }} />
+          {mounted && (
+            <>
+              <InstallPrompt deferredPrompt={deferredPrompt} />
+              <OfflineBanner isOnline={isOnline} />
+              <SyncStatus />
+              <Toaster position="bottom-right" toastOptions={{ className: 'rtl' }} />
+            </>
+          )}
         </SWRConfig>
       </QueryClientProvider>
     </I18nProvider>
