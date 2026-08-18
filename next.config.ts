@@ -1,6 +1,5 @@
 import type { NextConfig } from 'next';
 import withSerwistInit from '@serwist/next';
-import path from 'path';
 
 const withSerwist = withSerwistInit({
   swSrc: 'src/app/sw.ts',
@@ -11,14 +10,7 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig: NextConfig = {
-  webpack: (config) => {
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      '@i18n': path.resolve(__dirname, 'src/i18n'),
-      '@messages': path.resolve(__dirname, 'messages'),
-    };
-    return config;
-  },
+  turbopack: {},
   async headers() {
     return [
       {
