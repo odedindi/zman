@@ -107,11 +107,11 @@ yarn generate:icons # Generate PWA icons
 
 ## Environment Variables
 ```
-NEXT_PUBLIC_WS_URL=wss://zman-relay.fly.dev  # WebSocket relay
-NEXT_PUBLIC_VAPID_PUBLIC_KEY=...             # Push notifications
+NEXT_PUBLIC_WS_URL=wss://zman-relay.onrender.com  # WebSocket relay (Render)
+NEXT_PUBLIC_VAPID_PUBLIC_KEY=...                    # Push notifications
 ```
 
 ## Deployment
 - **Frontend**: Vercel (auto-detects Next.js)
-- **Relay Server**: Fly.io / Railway / Render (Hono + ws)
+- **Relay Server**: Render (free tier, Docker)
 - **Domain**: Custom domain with HTTPS required for PWA

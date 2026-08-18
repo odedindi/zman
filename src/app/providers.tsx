@@ -1,14 +1,19 @@
 'use client';
 
 import { ReactNode, useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { SWRConfig } from 'swr';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { I18nProvider } from '@/i18n/context';
 import { InstallPrompt } from '@/components/pwa/InstallPrompt';
 import { OfflineBanner } from '@/components/pwa/OfflineBanner';
 import { SyncStatus } from '@/components/pwa/SyncStatus';
-import { Toaster } from '@/components/ui/toaster';
 import { Locale } from '@/i18n';
+
+const Toaster = dynamic(
+  () => import('@/components/ui/toaster').then((mod) => mod.Toaster),
+  { ssr: false }
+);
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>;

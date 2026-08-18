@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: zman-relay
+    runtime: docker
+    dockerfilePath: ./relay-server/Dockerfile
+    dockerContext: ./relay-server
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production

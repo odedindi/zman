@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Assistant } from 'next/font/google';
-import { redirect } from 'next/navigation';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
@@ -37,7 +36,6 @@ export const metadata: Metadata = {
     apple: '/icons/icon-192.png',
   },
   manifest: '/manifest.json',
-  themeColor: '#f59e0b',
 };
 
 export const viewport: Viewport = {
@@ -47,6 +45,16 @@ export const viewport: Viewport = {
   maximumScale: 5,
 };
 
-export default function RootLayout() {
-  redirect('/en');
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html className={`${inter.variable} ${assistant.variable}`}>
+      <body className="min-h-screen bg-background font-sans antialiased">
+        {children}
+      </body>
+    </html>
+  );
 }
