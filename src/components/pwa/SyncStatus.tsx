@@ -5,11 +5,13 @@ import { RefreshCw, CheckCircle2, AlertCircle, Loader2, Wifi, WifiOff, Clock, Ch
 import { useTranslations } from '@/i18n/context';
 import { cn } from '@/lib/utils';
 import { useOfflineQueue } from '@/hooks/useOfflineQueue';
+import { useWsWakeUp } from '@/hooks/useWsWakeUp';
 import { QueueStatusPanel } from './QueueStatusPanel';
 
 export function SyncStatus({ entityId, entityName }: { entityId?: string; entityName?: string }) {
   const t = useTranslations('pwa.syncStatus');
   const [showPanel, setShowPanel] = useState(false);
+  const { isWaking } = useWsWakeUp();
 
   const {
     pendingCount,
@@ -18,9 +20,12 @@ export function SyncStatus({ entityId, entityName }: { entityId?: string; entity
     isOnline,
   } = useOfflineQueue(entityId);
 
-  if (syncStatus === 'idle' && !pendingCount && isOnline) return null;
+  const effectiveStatus = isWaking ? 'waking' : syncStatus;
+
+  if (effectiveStatus === 'idle' && !pendingCount && isOnline) return null;
 
   const statusIcons = {
+    waking: <Loader2 className="h-4 w-4 animate-spin text-amber-500" />,
     syncing: <Loader2 className="h-4 w-4 animate-spin text-primary" />,
     synced: <CheckCircle2 className="h-4 w-4 text-green-500" />,
     error: <AlertCircle className="h-4 w-4 text-red-500" />,
@@ -30,6 +35,7 @@ export function SyncStatus({ entityId, entityName }: { entityId?: string; entity
   };
 
   const statusLabels = {
+    waking: t('waking'),
     syncing: t('syncing'),
     synced: t('synced'),
     pending: `${pendingCount} ${t('pending')}`,
@@ -49,12 +55,12 @@ export function SyncStatus({ entityId, entityName }: { entityId?: string; entity
           showPanel ? 'rounded-b-none' : 'rounded-full'
         )}
         aria-expanded={showPanel}
-        aria-label={statusLabels[syncStatus]}
+        aria-label={statusLabels[effectiveStatus]}
       >
-        {statusIcons[syncStatus]}
+        {statusIcons[effectiveStatus]}
         <span className="text-xs font-medium text-muted-foreground hidden sm:inline">
-          {statusLabels[syncStatus]}
-          {lastSynced && syncStatus === 'synced' && (
+          {statusLabels[effectiveStatus]}
+          {lastSynced && effectiveStatus === 'synced' && (
             <>
               <Clock className="h-3 w-3 inline ml-1 -mt-0.5" />
               {lastSynced}

@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { createServer } from 'http';
 import { WebSocketServer } from 'ws';
-import { handleConnection } from './ws-handler';
+import { handleConnection } from './ws-handler.js';
 
 const app = new Hono();
 const PORT = parseInt(process.env.PORT || '3001', 10);

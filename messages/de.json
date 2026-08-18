@@ -103,6 +103,7 @@
       "pending": "Ausstehende Änderungen",
       "error": "Sync-Fehler",
       "offline": "Offline",
+      "waking": "Synchronisierungsserver wird geweckt...",
       "lastSync": "Zuletzt synchronisiert {time}"
     },
     "conflict": {

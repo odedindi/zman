@@ -1,6 +1,6 @@
 import { WebSocket, RawData } from 'ws';
 import { IncomingMessage } from 'http';
-import { roomManager } from './room-manager';
+import { roomManager } from './room-manager.js';
 
 interface ParsedUrl {
   docName: string;
