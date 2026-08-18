@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { locales, type Locale, localeDirections } from '@i18n';
+import { locales, type Locale, localeDirections } from '@/i18n';
 import { Providers } from '../providers';
 
 export async function generateStaticParams() {
@@ -24,7 +24,7 @@ export default async function LocaleLayout({
   const direction = localeDirections[resolvedLocale];
 
   return (
-    <div dir={direction} className={resolvedLocale === 'he' ? 'font-hebrew' : ''}>
+    <div dir={direction} lang={resolvedLocale} className={resolvedLocale === 'he' ? 'font-hebrew' : ''}>
       <Providers locale={resolvedLocale} messages={messages}>
         {children}
       </Providers>

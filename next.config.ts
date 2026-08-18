@@ -14,7 +14,7 @@ const nextConfig: NextConfig = {
   webpack: (config) => {
     config.resolve.alias = {
       ...config.resolve.alias,
-      '@i18n': path.resolve(__dirname, 'i18n'),
+      '@i18n': path.resolve(__dirname, 'src/i18n'),
       '@messages': path.resolve(__dirname, 'messages'),
     };
     return config;
