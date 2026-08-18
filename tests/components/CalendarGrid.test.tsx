@@ -4,19 +4,25 @@ import { CalendarGrid, CalendarEvent } from '@/components/calendar/CalendarGrid'
 import { I18nProvider } from '@/i18n/context';
 
 const mockMessages = {
-  'calendar.noEvents': 'No events',
-  'calendar.daysShort.sun': 'Sun',
-  'calendar.daysShort.mon': 'Mon',
-  'calendar.daysShort.tue': 'Tue',
-  'calendar.daysShort.wed': 'Wed',
-  'calendar.daysShort.thu': 'Thu',
-  'calendar.daysShort.fri': 'Fri',
-  'calendar.daysShort.sat': 'Sat',
-  'calendar.exception.cancelled': 'Cancelled',
-  'calendar.exception.moved': 'Moved',
-  'calendar.exception.earlyPickup': 'Early pickup',
-  'calendar.exception.lateDrop': 'Late drop',
-  'calendar.more': 'more',
+  calendar: {
+    noEvents: 'No events',
+    more: 'more',
+    daysShort: {
+      sun: 'Sun',
+      mon: 'Mon',
+      tue: 'Tue',
+      wed: 'Wed',
+      thu: 'Thu',
+      fri: 'Fri',
+      sat: 'Sat',
+    },
+    exception: {
+      cancelled: 'Cancelled',
+      moved: 'Moved',
+      earlyPickup: 'Early pickup',
+      lateDrop: 'Late drop',
+    },
+  },
 };
 
 function renderWithI18n(ui: React.ReactElement) {

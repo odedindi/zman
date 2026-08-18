@@ -5,11 +5,13 @@ import { useEntitiesStore } from '@/store/entities';
 import { I18nProvider } from '@/i18n/context';
 
 const mockMessages = {
-  'entities.addFirst': 'Add first entity',
-  'entities.select': 'Select',
-  'entities.addNew': 'Add new',
-  'entities.manage': 'Manage',
-  'entities.backToHome': 'Back to home',
+  entities: {
+    addFirst: 'Add first entity',
+    select: 'Select',
+    addNew: 'Add new',
+    manage: 'Manage',
+    backToHome: 'Back to home',
+  },
 };
 
 function renderWithI18n(ui: React.ReactElement) {
