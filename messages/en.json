@@ -6,7 +6,7 @@
   },
   "nav": {
     "home": "Home",
-    "entities": "Entities",
+    "kids": "Kids",
     "settings": "Settings",
     "day": "Day",
     "week": "Week",
@@ -28,7 +28,7 @@
       "desc": "Day, Week, Month, and Semester"
     },
     "multipleEntities": {
-      "title": "Multiple Kids/Entities",
+      "title": "Multiple Kids",
       "desc": "Add as many as needed - kindergarten, school, activities"
     },
     "pushNotifications": {
@@ -52,7 +52,7 @@
     "title": "How It Works",
     "steps": [
       {
-        "title": "Create Entity",
+        "title": "Create Kid",
         "desc": "Add a child, kindergarten, school, or activity with color and icon"
       },
       {
@@ -121,7 +121,7 @@
       "clearQueue": "Clear Queue",
       "confirmClear": "Are you sure you want to clear the queue? This will discard all pending changes.",
       "noPending": "No pending changes",
-      "entity": "Entity",
+      "entity": "Kid",
       "operation": "Operation",
       "time": "Time",
       "created": "Created",
@@ -142,25 +142,25 @@
     "terms": "Terms",
     "openSource": "Open Source"
   },
-  "entities": {
-    "title": "Manage Entities",
-    "addFirst": "Create First Entity",
-    "addNew": "Add New Entity",
-    "editEntity": "Edit Entity",
-    "addEntity": "Add Entity",
-    "yourEntities": "Your Entities",
+  "kids": {
+    "title": "Manage Kids",
+    "addFirst": "Create First Kid",
+    "addNew": "Add New Kid",
+    "editEntity": "Edit Kid",
+    "addEntity": "Add Kid",
+    "yourEntities": "Your Kids",
     "empty": {
-      "title": "No Entities Yet",
-      "description": "Create your first entity - a child, kindergarten, school, activity, or anything you want to track"
+      "title": "No Kids Yet",
+      "description": "Create your first kid - a child, kindergarten, school, activity, or anything you want to track"
     },
-    "addFirst": "Create First Entity",
+    "addFirst": "Create First Kid",
     "addNew": "Add New",
     "manage": "Manage",
     "active": "Active",
     "select": "Select",
     "edit": "Edit",
     "delete": "Delete",
-    "confirmDelete": "Are you sure you want to delete this entity? All associated data will be removed.",
+    "confirmDelete": "Are you sure you want to delete this kid? All associated data will be removed.",
     "createdAt": "Created on {date}",
     "backToHome": "Back to Home"
   },
@@ -253,7 +253,7 @@
     "endDateAfterStart": "End date must be after start date",
     "schoolHoliday": "School Holiday",
     "publicHoliday": "Public Holiday",
-    "noEntity": "Create an entity first",
+    "noEntity": "Create a kid first",
     "addFirstHoliday": "Add First Holiday"
   },
   "exceptions": {
@@ -283,7 +283,7 @@
     "cancelTomorrow": "Cancel Tomorrow",
     "earlyPickupToday": "Early Pickup Today",
     "lateDropToday": "Late Drop Today",
-    "noEntity": "Create an entity first",
+    "noEntity": "Create a kid first",
     "addFirstException": "Add First Exception"
   },
   "settings": {

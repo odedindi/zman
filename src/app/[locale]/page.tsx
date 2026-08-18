@@ -34,8 +34,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <h1 className="text-2xl font-bold text-primary">zman</h1>
           <nav className="flex items-center gap-4">
-            <Link href={`/${locale}/entities`} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              {t('nav.entities')}
+            <Link href={`/${locale}/kids`} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+              {t('nav.kids')}
             </Link>
             <Link href={`/${locale}/settings`} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
               {t('nav.settings')}
@@ -63,12 +63,18 @@ export default function HomePage() {
             {t('hero.description')}
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <button className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors">
+            <Link
+              href={`/${locale}/kids`}
+              className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-3 rounded-lg font-semibold text-lg hover:bg-primary/90 transition-colors text-center"
+            >
               {t('hero.ctaPrimary')}
-            </button>
-            <button className="w-full sm:w-auto bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold text-lg hover:bg-secondary/80 transition-colors">
+            </Link>
+            <Link
+              href={`/${locale}/calendar/week/current`}
+              className="w-full sm:w-auto bg-secondary text-secondary-foreground px-8 py-3 rounded-lg font-semibold text-lg hover:bg-secondary/80 transition-colors text-center"
+            >
               {t('hero.ctaSecondary')}
-            </button>
+            </Link>
           </div>
         </div>
       </section>

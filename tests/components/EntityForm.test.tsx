@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { EntityForm } from '@/components/entities/EntityForm';
+import { EntityForm } from '@/components/kids/EntityForm';
 import { Entity } from '@/store/entities';
 import { I18nProvider } from '@/i18n/context';
 

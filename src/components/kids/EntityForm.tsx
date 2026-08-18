@@ -126,9 +126,9 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
       <div>
         <label className="block text-sm font-medium mb-2">סמל (אמוג'י)</label>
         <div className="grid grid-cols-8 gap-2 max-h-48 overflow-y-auto">
-          {ENTITY_AVATARS.map((avatar) => (
+          {ENTITY_AVATARS.map((avatar,i) => (
             <button
-              key={avatar}
+              key={i}
               type="button"
               onClick={() => setFormData({ ...formData, avatar })}
               className={cn(

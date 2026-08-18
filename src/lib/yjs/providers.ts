@@ -16,7 +16,7 @@ const providerCache = new Map<string, YjsProviders>();
 
 export function createYjsProviders(
   docName: string,
-  wsUrl: string = process.env.NEXT_PUBLIC_WS_URL || 'wss://zman-relay.fly.dev'
+  wsUrl: string = process.env.NEXT_PUBLIC_WS_URL || 'wss://zman-relay.onrender.com'
 ): YjsProviders {
   if (providerCache.has(docName)) {
     return providerCache.get(docName)!;

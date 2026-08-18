@@ -4,12 +4,12 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useTranslations, useLocale } from '@/i18n/context';
 import { useEntities } from '@/hooks/useEntities';
-import { EntityForm } from '@/components/entities/EntityForm';
+import { EntityForm } from '@/components/kids/EntityForm';
 import { Plus, Trash2, Edit, X, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export default function EntitiesPage() {
-  const t = useTranslations('entities');
+export default function KidsPage() {
+  const t = useTranslations('kids');
   const locale = useLocale();
   const { entities, activeEntityId, setActiveEntity, addEntity, updateEntity, deleteEntity, isLoading, allEntities } = useEntities();
   const [showForm, setShowForm] = useState(false);
@@ -156,31 +156,31 @@ export default function EntitiesPage() {
                 </article>
               ))}
             </div>
-
-            {showForm && (
-              <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
-                <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 animate-slide-up">
-                  <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-xl font-bold">
-                      {editingEntity ? t('editEntity') : t('addEntity')}
-                    </h2>
-                    <button
-                      onClick={handleCancel}
-                      className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
-                    >
-                      <X className="h-5 w-5" />
-                    </button>
-                  </div>
-                  <EntityForm
-                    initialEntity={editingEntity ? { ...entities[editingEntity] } : undefined}
-                    onSubmit={editingEntity ? handleEdit : handleAdd}
-                    onCancel={handleCancel}
-                    isLoading={formSubmitting}
-                  />
-                </div>
-              </div>
-            )}
           </>
+        )}
+
+        {showForm && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-fade-in">
+            <div className="w-full max-w-md bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 animate-slide-up">
+              <div className="flex items-center justify-between mb-6">
+                <h2 className="text-xl font-bold">
+                  {editingEntity ? t('editEntity') : t('addEntity')}
+                </h2>
+                <button
+                  onClick={handleCancel}
+                  className="p-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                >
+                  <X className="h-5 w-5" />
+                </button>
+              </div>
+              <EntityForm
+                initialEntity={editingEntity ? { ...entities[editingEntity] } : undefined}
+                onSubmit={editingEntity ? handleEdit : handleAdd}
+                onCancel={handleCancel}
+                isLoading={formSubmitting}
+              />
+            </div>
+          </div>
         )}
       </main>
     </div>

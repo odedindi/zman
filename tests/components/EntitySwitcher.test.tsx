@@ -1,12 +1,12 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
-import { EntitySwitcher } from '@/components/entities/EntitySwitcher';
+import { EntitySwitcher } from '@/components/kids/EntitySwitcher';
 import { useEntitiesStore } from '@/store/entities';
 import { I18nProvider } from '@/i18n/context';
 
 const mockMessages = {
-  entities: {
-    addFirst: 'Add first entity',
+  kids: {
+    addFirst: 'Add first kid',
     select: 'Select',
     addNew: 'Add new',
     manage: 'Manage',
@@ -28,10 +28,10 @@ describe('EntitySwitcher', () => {
     vi.clearAllMocks();
   });
 
-  it('should show "Add first entity" link when no entities exist', () => {
+  it('should show "Add first kid" link when no entities exist', () => {
     renderWithI18n(<EntitySwitcher />);
-    expect(screen.getByText('Add first entity')).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: 'Add first entity' })).toHaveAttribute('href', '/en/entities/new');
+    expect(screen.getByText('Add first kid')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Add first kid' })).toHaveAttribute('href', '/en/kids/new');
   });
 
   it('should show active entity when entities exist', () => {
@@ -101,7 +101,7 @@ describe('EntitySwitcher', () => {
     expect(screen.queryByText('Add new')).not.toBeInTheDocument();
   });
 
-  it('should navigate to new entity page when "Add new" is clicked', () => {
+  it('should navigate to new kid page when "Add new" is clicked', () => {
     const id = useEntitiesStore.getState().addEntity({ name: 'Test School', color: '#3b82f6', avatar: '🏫' });
     useEntitiesStore.getState().setActiveEntity(id);
 
@@ -112,10 +112,10 @@ describe('EntitySwitcher', () => {
     const addNewButton = screen.getByRole('button', { name: 'Add new' });
     fireEvent.click(addNewButton);
 
-    expect(window.location.href).toBe('/en/entities/new');
+    expect(window.location.href).toBe('/en/kids/new');
   });
 
-  it('should navigate to manage entities page when "Manage" is clicked', () => {
+  it('should navigate to manage kids page when "Manage" is clicked', () => {
     const id = useEntitiesStore.getState().addEntity({ name: 'Test School', color: '#3b82f6', avatar: '🏫' });
     useEntitiesStore.getState().setActiveEntity(id);
 
@@ -126,6 +126,6 @@ describe('EntitySwitcher', () => {
     const manageButton = screen.getByRole('button', { name: 'Manage' });
     fireEvent.click(manageButton);
 
-    expect(window.location.href).toBe('/en/entities');
+    expect(window.location.href).toBe('/en/kids');
   });
 });

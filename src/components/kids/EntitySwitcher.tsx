@@ -24,7 +24,7 @@ const ENTITY_ICONS = {
 type EntityIconKey = keyof typeof ENTITY_ICONS;
 
 export function EntitySwitcher() {
-  const t = useTranslations();
+  const t = useTranslations('kids');
   const locale = useLocale();
   const { entities, activeEntityId, setActiveEntity, allEntities } = useEntities();
   const activeEntity = activeEntityId ? entities[activeEntityId] : null;
@@ -36,22 +36,22 @@ export function EntitySwitcher() {
   };
 
   const handleAdd = () => {
-    window.location.href = `/${locale}/entities/new`;
+    window.location.href = `/${locale}/kids/new`;
   };
 
   const handleManage = () => {
-    window.location.href = `/${locale}/entities`;
+    window.location.href = `/${locale}/kids`;
   };
 
   if (allEntities.length === 0) {
     return (
       <div className="flex items-center gap-2">
         <Link
-          href={`/${locale}/entities/new`}
+          href={`/${locale}/kids/new`}
           className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
         >
           <Plus className="h-4 w-4" />
-          {t('entities.addFirst')}
+          {t('addFirst')}
         </Link>
       </div>
     );
@@ -76,7 +76,7 @@ export function EntitySwitcher() {
           {activeEntity?.avatar || '?'}
         </div>
         <span className="hidden sm:block truncate max-w-[150px]">
-          {activeEntity?.name || t('entities.select')}
+          {activeEntity?.name || t('select')}
         </span>
         <ChevronDown className={cn('h-4 w-4 transition-transform', isOpen && 'rotate-180')} />
       </button>
@@ -115,14 +115,14 @@ export function EntitySwitcher() {
               className="w-full flex items-center gap-3 px-3 py-2 text-sm text-primary hover:bg-primary/10 transition-colors"
             >
               <Plus className="h-4 w-4" />
-              {t('entities.addNew')}
+              {t('addNew')}
             </button>
             <button
               onClick={handleManage}
               className="w-full flex items-center gap-3 px-3 py-2 text-sm text-muted-foreground hover:bg-muted hover:text-foreground transition-colors"
             >
               <Edit className="h-4 w-4" />
-              {t('entities.manage')}
+              {t('manage')}
             </button>
           </div>
         </>

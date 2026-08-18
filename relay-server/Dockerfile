@@ -1,8 +1,8 @@
 FROM node:20-alpine
 WORKDIR /app
-COPY package.json yarn.lock* ./
-RUN yarn install --frozen-lockfile
+COPY package.json package-lock.json* ./
+RUN npm install --production=false
 COPY . .
-RUN yarn build
+RUN npx tsc
 EXPOSE 3001
-CMD ["yarn", "start"]
+CMD ["node", "dist/index.js"]
