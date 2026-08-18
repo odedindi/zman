@@ -22,6 +22,7 @@
     "betaBadge": "Beta - Works offline, syncs automatically"
   },
   "features": {
+    "title": "Features",
     "multipleViews": {
       "title": "Multiple Views",
       "desc": "Day, Week, Month, and Semester"

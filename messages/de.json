@@ -22,6 +22,7 @@
     "betaBadge": "Beta - Funktioniert offline, synchronisiert automatisch"
   },
   "features": {
+    "title": "Funktionen",
     "multipleViews": {
       "title": "Mehrere Ansichten",
       "desc": "Tag, Woche, Monat und Semester"
