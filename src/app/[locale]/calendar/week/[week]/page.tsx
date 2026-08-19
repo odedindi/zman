@@ -6,7 +6,7 @@ import { useTranslations, useLocale } from '@/i18n/context';
 import { useEntitiesStore, Entity, ScheduleEntry, HolidayEntry, ExceptionEntry } from '@/store/entities';
 import { CalendarGrid, CalendarEvent } from '@/components/calendar/CalendarGrid';
 import { ChevronLeft, ChevronRight, Calendar, Loader2 } from 'lucide-react';
-import { format, parseISO, addWeeks, subWeeks, startOfWeek, endOfWeek, setISOWeek, isSameDay, isSameWeek } from 'date-fns';
+import { format, addWeeks, subWeeks, startOfISOWeek, setISOWeek, isSameDay, isSameWeek } from 'date-fns';
 import { cn } from '@/lib/utils';
 
 interface WeekViewPageProps {
@@ -26,16 +26,26 @@ export default function WeekViewPage({ params }: WeekViewPageProps) {
 
   const [weekParam, setWeekParam] = useState<string>('');
   const [weekStart, setWeekStart] = useState<Date>(new Date());
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    let cancelled = false;
     params.then((p) => {
+      if (cancelled) return;
       setWeekParam(p.week);
-      const [yearStr, weekStr] = p.week.split('-W');
-      const year = parseInt(yearStr, 10);
-      const week = parseInt(weekStr, 10);
-      const start = startOfWeek(setISOWeek(new Date(year, 0, 1), week));
-      setWeekStart(start);
+      try {
+        const [yearStr, weekStr] = p.week.split('-W');
+        const year = parseInt(yearStr, 10);
+        const week = parseInt(weekStr, 10);
+        const start = startOfISOWeek(setISOWeek(new Date(year, 0, 1), week));
+        setWeekStart(start);
+      } catch {
+        setWeekStart(new Date());
+      } finally {
+        setIsLoading(false);
+      }
     });
+    return () => { cancelled = true; };
   }, [params]);
 
   const prevWeek = format(subWeeks(weekStart, 1), 'yyyy-\'W\'ww');
@@ -112,6 +122,14 @@ export default function WeekViewPage({ params }: WeekViewPageProps) {
   }, [activeEntityId, weekStart, weekParam, schedules, exceptions, holidays, entity, t]);
 
   const weekLabel = t('weekOf', { date: format(weekStart, 'MMM d') });
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-background flex items-center justify-center">
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">

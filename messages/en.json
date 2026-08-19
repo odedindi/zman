@@ -154,8 +154,6 @@
       "title": "No Kids Yet",
       "description": "Create your first kid - a child, kindergarten, school, activity, or anything you want to track"
     },
-    "addFirst": "Create First Kid",
-    "addNew": "Add New",
     "manage": "Manage",
     "active": "Active",
     "select": "Select",
@@ -167,6 +165,7 @@
   },
   "calendar": {
     "today": "Today",
+    "backToHome": "Back to Home",
     "noEvents": "No events today",
     "more": "more",
     "views": {

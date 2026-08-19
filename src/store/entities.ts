@@ -57,6 +57,7 @@ interface EntitiesState {
   exceptions: Record<string, ExceptionEntry[]>;
   activeEntityId: string | null;
   isLoading: boolean;
+  isHydrated: boolean;
   error: string | null;
 
   // Entity actions
@@ -124,7 +125,8 @@ export const useEntitiesStore = create<EntitiesState>()(
       holidays: {},
       exceptions: {},
       activeEntityId: null,
-      isLoading: false,
+      isLoading: true,
+      isHydrated: false,
       error: null,
 
       // Entity actions
@@ -361,6 +363,12 @@ export const useEntitiesStore = create<EntitiesState>()(
         exceptions: state.exceptions,
         activeEntityId: state.activeEntityId,
       }),
+      onRehydrateStorage: () => (state) => {
+        if (state) {
+          state.isLoading = false;
+          state.isHydrated = true;
+        }
+      },
     }
   )
 );

@@ -154,8 +154,6 @@
       "title": "Noch keine Kinder",
       "description": "Erstelle dein erstes Kind - ein Kind, Kindergarten, Schule, Aktivität oder was auch immer du verfolgen möchtest"
     },
-    "addFirst": "Erstes Kind erstellen",
-    "addNew": "Neu hinzufügen",
     "manage": "Verwalten",
     "active": "Aktiv",
     "select": "Auswählen",
@@ -167,6 +165,7 @@
   },
   "calendar": {
     "today": "Heute",
+    "backToHome": "Zur Startseite",
     "noEvents": "Keine Ereignisse heute",
     "more": "mehr",
     "views": {

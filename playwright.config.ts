@@ -23,7 +23,7 @@ export default defineConfig({
   webServer: {
     command: 'yarn dev',
     port: 3000,
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: true,
     timeout: 120000,
     env: {
       NODE_TLS_REJECT_UNAUTHORIZED: '0',
