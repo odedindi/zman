@@ -161,7 +161,21 @@
     "delete": "Löschen",
     "confirmDelete": "Bist du sicher, dass du dieses Kind löschen möchtest? Alle zugehörigen Daten werden entfernt.",
     "createdAt": "Erstellt am {date}",
-    "backToHome": "Zur Startseite"
+    "backToHome": "Zur Startseite",
+    "nav": {
+      "schedule": "Zeitplan festlegen",
+      "week": "Wochenansicht",
+      "month": "Monatsansicht"
+    },
+    "entityName": "Entitätsname",
+    "editName": "Namen bearbeiten",
+    "entityNamePlaceholder": "z.B. Kindergarten, Schule, Fußballclub",
+    "color": "Farbe",
+    "avatar": "Avatar",
+    "colorAria": "Farbe {color}",
+    "avatarAria": "Avatar {avatar}",
+    "createEntity": "Entität erstellen",
+    "saveChanges": "Änderungen speichern"
   },
   "calendar": {
     "today": "Heute",

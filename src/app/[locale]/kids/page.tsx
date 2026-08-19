@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { useTranslations, useLocale } from '@/i18n/context';
 import { useEntities } from '@/hooks/useEntities';
 import { EntityForm } from '@/components/kids/EntityForm';
-import { Plus, Trash2, Edit, X, Loader2 } from 'lucide-react';
+import { Plus, Trash2, Edit, X, Loader2, Calendar, Clock, ChevronRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { format } from 'date-fns';
 
 export default function KidsPage() {
   const t = useTranslations('kids');
@@ -71,6 +72,31 @@ export default function KidsPage() {
             {t('backToHome')}
           </Link>
           <h1 className="text-xl font-bold">{t('title')}</h1>
+          {activeEntityId && (
+            <nav className="flex items-center gap-2">
+              <Link
+                href={`/${locale}/calendar/schedule`}
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+              >
+                <Clock className="h-4 w-4" />
+                <span className="hidden sm:inline">{t('nav.schedule')}</span>
+              </Link>
+              <Link
+                href={`/${locale}/calendar/week/${format(new Date(), 'yyyy-\'W\'ww')}`}
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Calendar className="h-4 w-4" />
+                <span className="hidden sm:inline">{t('nav.week')}</span>
+              </Link>
+              <Link
+                href={`/${locale}/calendar/month/${format(new Date(), 'yyyy-MM')}`}
+                className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <Calendar className="h-4 w-4" />
+                <span className="hidden sm:inline">{t('nav.month')}</span>
+              </Link>
+            </nav>
+          )}
           <div className="w-20" />
         </div>
       </header>

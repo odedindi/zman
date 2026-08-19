@@ -161,7 +161,21 @@
     "delete": "מחק",
     "confirmDelete": "האם אתה בטוח שברצונך למחוק ילד זה? כל הנתונים הקשורים אליו יימחקו.",
     "createdAt": "נוצר ב-{date}",
-    "backToHome": "חזרה לדף הבית"
+    "backToHome": "חזרה לדף הבית",
+    "nav": {
+      "schedule": "הגדר לוח זמנים",
+      "week": "תצוגת שבוע",
+      "month": "תצוגת חודש"
+    },
+    "entityName": "שם הישות",
+    "editName": "ערוך שם",
+    "entityNamePlaceholder": "למשל: גן ילדים, בית ספר, חוג כדורגל",
+    "color": "צבע",
+    "avatar": "סמל",
+    "colorAria": "צבע {color}",
+    "avatarAria": "סמל {avatar}",
+    "createEntity": "צור ישות",
+    "saveChanges": "שמור שינויים"
   },
   "calendar": {
     "today": "היום",

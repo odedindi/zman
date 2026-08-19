@@ -161,7 +161,21 @@
     "delete": "Delete",
     "confirmDelete": "Are you sure you want to delete this kid? All associated data will be removed.",
     "createdAt": "Created on {date}",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "nav": {
+      "schedule": "Set Schedule",
+      "week": "Week View",
+      "month": "Month View"
+    },
+    "entityName": "Entity Name",
+    "editName": "Edit Name",
+    "entityNamePlaceholder": "e.g., Kindergarten, School, Soccer Club",
+    "color": "Color",
+    "avatar": "Avatar",
+    "colorAria": "Color {color}",
+    "avatarAria": "Avatar {avatar}",
+    "createEntity": "Create Entity",
+    "saveChanges": "Save Changes"
   },
   "calendar": {
     "today": "Today",

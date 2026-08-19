@@ -69,6 +69,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
   onCancel: () => void;
   isLoading: boolean;
 }) {
+  const t = useTranslations('kids');
   const [formData, setFormData] = useState<EntityFormData>({
     name: initialEntity?.name || '',
     color: initialEntity?.color || ENTITY_COLORS[0],
@@ -86,7 +87,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
         <label htmlFor="name" className="block text-sm font-medium mb-2">
-          {initialEntity ? 'ערוך שם' : 'שם הישות'}
+          {t(initialEntity ? 'editName' : 'entityName')}
         </label>
         <input
           id="name"
@@ -94,7 +95,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           className="w-full px-4 py-3 rounded-lg border border-border bg-background focus:ring-2 focus:ring-primary focus:border-transparent"
-          placeholder={initialEntity ? '' : 'למשל: גן ילדים, בית ספר, חוג כדורגל'}
+          placeholder={t('entityNamePlaceholder')}
           autoFocus
           required
           maxLength={50}
@@ -102,7 +103,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">צבע</label>
+        <label className="block text-sm font-medium mb-2">{t('color')}</label>
         <div className="grid grid-cols-5 gap-2">
           {ENTITY_COLORS.map((color) => (
             <button
@@ -116,7 +117,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
                   : 'border-transparent hover:border-muted/50'
               )}
               style={{ backgroundColor: color }}
-              aria-label={`צבע ${color}`}
+              aria-label={t('colorAria', { color })}
               aria-pressed={formData.color === color}
             />
           ))}
@@ -124,7 +125,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">סמל (אמוג'י)</label>
+        <label className="block text-sm font-medium mb-2">{t('avatar')}</label>
         <div className="grid grid-cols-8 gap-2 max-h-48 overflow-y-auto">
           {ENTITY_AVATARS.map((avatar,i) => (
             <button
@@ -137,7 +138,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
                   ? 'border-primary ring-2 ring-primary ring-offset-2 scale-105 bg-primary/10'
                   : 'border-transparent hover:border-muted/50 hover:scale-105'
               )}
-              aria-label={`סמל ${avatar}`}
+              aria-label={t('avatarAria', { avatar })}
               aria-pressed={formData.avatar === avatar}
             >
               {avatar}
@@ -153,7 +154,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
           className="flex-1 px-4 py-3 rounded-lg border border-border bg-background text-foreground font-medium hover:bg-muted transition-colors"
         >
           <X className="h-4 w-4 inline mr-2" />
-          ביטול
+          {t('common.cancel')}
         </button>
         <button
           type="submit"
@@ -162,7 +163,7 @@ export function EntityForm({ initialEntity, onSubmit, onCancel, isLoading }: {
         >
           {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
           <Save className="h-4 w-4" />
-          {initialEntity ? 'שמור שינויים' : 'צור ישות'}
+          {initialEntity ? t('saveChanges') : t('createEntity')}
         </button>
       </div>
     </form>
